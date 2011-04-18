@@ -105,7 +105,7 @@ hr { height: 2px; color: #333; margin: 10px 50px; background: #333; }
 #home div.icons a:last-child { padding-right: 0px; }
 
 #contactFormContainer { position: relative; z-index: 100; padding: 20px; width: 80%; margin: 10px auto; }
-#contactFormContainer form { padding: 10px; position: relative; background: #eee; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; border: 10px solid #ccc; -webkit-box-shadow: inset 0px 1px 1px #fff7ff; -moz-box-shadow: inset 0px 1px 1px #fff7ff; box-shadow: inset 0px 1px 1px #fff7ff;  }
+#contactFormContainer form { padding: 10px; position: relative; background: #eee; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; border: 16px solid #999;-webkit-box-shadow: 10px 10px 5px #474747;-moz-box-shadow: 10px 10px 5px #474747;box-shadow: 10px 10px 5px #474747;  }
 #contactFormContainer form div.input { padding:4px; }
 #contactFormContainer form div.input label { font-size: 18px; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
 #contactFormContainer form div.input input, #contactFormContainer form div.input textarea  { border: 1px solid #666; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; width: 97%; padding: 8px; }
@@ -118,7 +118,7 @@ hr { height: 2px; color: #333; margin: 10px 50px; background: #333; }
 
 .blue_button:active { background: #164169;-moz-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* FF3.5+ */-webkit-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* Saf3.0+, Chrome */box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* Opera 10.5, IE 9.0 */text-shadow: 0px 2px 0px #00488c;border-color: #0A3158;}
 
-#contactFormContainer form #unlock {	opacity:0.85; background: #000; filter:alpha(opacity=40);	position: absolute;	width: 100%;	height: 100%;top: 0px;	left: 0px;z-index: 10000;}
+#contactFormContainer form #unlock { opacity:0.85; background: #000; filter:alpha(opacity=85);	position: absolute;	width: 100%;	height: 100%;top: 0px;	left: 0px;z-index: 10000;}
 
 #unlock-bottom { position: relative; width:281px;  height:54px; border: 2px solid #616161; background: #282828; /* old browsers */background: -moz-linear-gradient(top, #282828 0%, #2B2B2B 48%, #1C1C1C 51%, #111111 100%); /* firefox */background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282828), color-stop(48%,#2B2B2B), color-stop(51%,#1C1C1C), color-stop(100%,#111111)); /* webkit */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#111111',GradientType=0 ); /* ie */background: -o-linear-gradient(top, #282828 0%,#2B2B2B 48%,#1C1C1C 51%,#111111 100%); /* opera */ -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;  margin-left: -140px; left: 50%; top: 72px; }
 #slide-to-unlock {  position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height:54px; background-image:url(../images/slide-to-unlock.gif); background-position: -20px -20px; }
