@@ -37,7 +37,7 @@ if (window.jQuery) {
 			$('#contact_form').attr('action', 'contact.php');
 		};
 
-		$('#main div.nav a').click(function(e){
+		$('#main div.nav a, a.back_to_top').click(function(e){
 			e.preventDefault();
 			scrollToPage($(this).attr('href'));
 		});
@@ -64,9 +64,6 @@ if (window.jQuery) {
 			{
 				
 				$("#slide-to-unlock").css("opacity", 1-(parseInt($("#unlock-handle").css("left"))/120));
-				//var left = parseFloat($('#unlock-handle').css('left').replace('px', ''));
-				//$('#unlock-handle').css('left',(left+30)+'px');
-				
 			},
 			stop: function(e,ui)
 			{
@@ -81,7 +78,6 @@ if (window.jQuery) {
 			}
 		});
 	});
-
 } else {
 	alert('What the f\u2730ck, no jQuery?');
 }
