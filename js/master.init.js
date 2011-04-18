@@ -62,33 +62,24 @@ if (window.jQuery) {
 			animate:true,
 			slide: function(e,ui)
 			{
-				$('#unlock-handle').css('margin-left','-30px');
+				
 				$("#slide-to-unlock").css("opacity", 1-(parseInt($("#unlock-handle").css("left"))/120));
-				var left = parseFloat($('#unlock-handle').css('left').replace('px', ''));
-				if (left>232) {
-					$('a.ui-slider-handle').css('left', '232px');
-				}
+				//var left = parseFloat($('#unlock-handle').css('left').replace('px', ''));
+				//$('#unlock-handle').css('left',(left+30)+'px');
+				
 			},
 			stop: function(e,ui)
 			{
-				if($("#unlock-handle").position().left > 225)
-				{
+				if($("#unlock-handle").position().left > 195) {
 					unlock();
-				}
-				else
-				{
-					$('#unlock-handle').css('margin-left','0px');
+				} else {
+					
 					$("#unlock-handle").animate({left: 0}, 200 );
 					$("#unlock-handle").parent().find('a').animate({left: 0}, 200 );
 					$("#slide-to-unlock").animate({opacity: 1}, 200 );
 				}
 			}
-		}
-	);
-
-	
-
-
+		});
 	});
 
 } else {

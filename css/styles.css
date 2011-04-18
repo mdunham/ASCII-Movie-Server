@@ -77,8 +77,8 @@ body { font: 14px 'HelveticaNeueLT Std', 'Helvetica Neue', Helvetica, Arial; col
 #bottom_jaw div.teeth { display: none; background: url('../images/bottom_teeth.png') repeat-x 50px 0px;  height: 52px; width: 100%; position: absolute; top: -51px; }
 #bottom_jaw div.motto { width: 100%; position: absolute; top: 0px; height: auto; text-align: center; left: 0px; }
 
-h1 { width: 610px; font-family: 'YanoneKaffeesatzBold'; font-weight: bold; font-size: 80px; margin: 14px auto; text-transform: uppercase; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
-h1 span { font-weight: normal; font-family: 'YanoneKaffeesatzRegular'; font-size: 60px; display: block; float:left; padding-top: 11px; }
+h1 { width: 400px; font-family: 'YanoneKaffeesatzBold'; font-weight: bold; font-size: 80px; margin: 14px auto; text-transform: uppercase; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
+h1 span { font-weight: normal; font-family: 'YanoneKaffeesatzRegular'; font-size: 60px; display: block; float:left; padding-top: 12px; }
 
 h2, h3, h4 { font-family: 'BebasRegular'; text-align:center; font-size:22px; padding: 80px 20px 20px 20px; text-transform: uppercase; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
 
@@ -86,7 +86,7 @@ body.noteeth h2, body.noteeth h3, body.noteeth h4 { padding-top: 20px; }
 
 #container { height: 100%; }
 
-hr { height: 3px; color: #333; margin: 10px 50px; background: #333; }
+hr { height: 2px; color: #333; margin: 10px 50px; background: #333; }
 
 #main { list-style: none; margin: 0px; padding: 0px; height: 100%; }
 #main li { background: #FFFFFF; border-top: 1px #333 solid; min-height: 450px; min-width: 605px; height: 100%; padding: 50px; width: 100%; z-index: 60; display: table; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -147,12 +147,12 @@ hr { height: 3px; color: #333; margin: 10px 50px; background: #333; }
 #unlock-bottom { position: relative; width:281px;  height:54px; background-image:url(../images/lock-bottom_box.png); margin-left: -140px; left: 50%; top: 72px; }
 #slide-to-unlock {  position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height:54px; background-image:url(../images/slide-to-unlock.gif); background-position: -20px -20px; }
 #unlock-slider-wrapper { padding-left:2px; padding-top:3px; }
-#unlock-slider { width:235px; height:50px; }
+#unlock-slider { width:205px; height:50px; }
 #unlock h4 { text-align:  center; padding: 30px; color: #fff;  margin-top: 40px; text-shadow: 0px 1px 1px #000;filter: dropshadow(color=#000000, offx=0, offy=1); }
 
 /* Used by the jQuery slider */
 .ui-slider { position: relative; background-repeat: no-repeat; background-position: center center; }
-.ui-slider-handle { position: absolute; z-index: 10; height: 50px; width: 72px; top: 0px; left: 0px; background-image: url(../images/lock-slider.png);  }
+.ui-slider-handle { position: absolute; z-index: 10; height: 50px; width: 72px; top: 0px; left: 0px;  background-image: url(../images/lock-slider.png);  }
 /*
 	End Main Layout Styles
 **************************************/
