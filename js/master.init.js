@@ -14,6 +14,18 @@ if (window.jQuery) {
 			checkTimer = setInterval( runCheck, 100);
 		});
 
+		if ($.cookie('noteeth')=='true') {
+			$('#top_jaw, #bottom_jaw').hide();
+			$('body').addClass('noteeth')
+		}
+
+
+		$('#hideTeeth').click(function(e) {
+			$.cookie('noteeth', 'true');
+			$('body').addClass('noteeth')
+			$('#top_jaw, #bottom_jaw').hide();
+		});
+
 		baseUrl = window.location.href;
 		if (baseUrl.indexOf('#') > 0) {
 			baseUrl = baseUrl.split('#');

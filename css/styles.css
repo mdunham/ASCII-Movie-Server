@@ -37,6 +37,8 @@ h1 span { font-weight: normal; font-size: 60px; display: block; float:left; padd
 
 h2, h3, h4 { text-align:center; font-size:22px; padding: 80px 20px 20px 20px; text-transform: uppercase; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
 
+body.noteeth h2, body.noteeth h3, body.noteeth h4 { padding-top: 20px; }
+
 #container { height: 100%; }
 
 hr { height: 3px; color: #333; margin: 10px 50px; background: #333; }
