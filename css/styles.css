@@ -104,6 +104,9 @@ hr { height: 2px; color: #333; margin: 10px 50px; background: #333; }
 #home div.icons a { display: inline-block; padding-right: 10px; }
 #home div.icons a:last-child { padding-right: 0px; }
 
+#footer { height: auto!important; min-height: 105px!important; background: #222; padding: 10px!important; text-align: center; color: #FFF; }
+#footer h4 { padding: 14px!important; }
+
 #contactFormContainer { position: relative; z-index: 100; padding: 20px; width: 80%; margin: 10px auto; }
 #contactFormContainer form { padding: 10px; position: relative; background: #eee; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; border: 16px solid #999;-webkit-box-shadow: 10px 10px 5px #474747;-moz-box-shadow: 10px 10px 5px #474747;box-shadow: 10px 10px 5px #474747;  }
 #contactFormContainer form div.input { padding:4px; }
