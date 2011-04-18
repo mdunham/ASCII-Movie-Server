@@ -4,7 +4,8 @@
  * @author Matthew Dunham <matt@matthewdunham.com>
  */
 
-var checkTimer;
+var checkTimer,
+	baseUrl;
 
 if (window.jQuery) {
 	jQuery(function($){
@@ -12,6 +13,17 @@ if (window.jQuery) {
 		$(window).load(function() {
 			checkTimer = setInterval( runCheck, 100);
 		});
+
+		baseUrl = window.location.href;
+		if (baseUrl.indexOf('#') > 0) {
+			baseUrl = baseUrl.split('#');
+			baseUrl = baseUrl[0];
+		}
+
+		var unlock = function() {
+			$('#unlock').fadeOut('slow');
+			$('#contact_form').attr('action', 'contact.php');
+		};
 
 		$('#main div.nav a').click(function(e){
 			e.preventDefault();
@@ -27,40 +39,43 @@ if (window.jQuery) {
 			$('label').hide();
 		}
 
-		// Set the slider to be sliding
+		var fixSlider = function() {
+			$('a.ui-slider-handle').attr('id', 'unlock-handle');
+		};
+
+		setTimeout(fixSlider, 1000);
+
 		$("#unlock-slider").slider({
 			handle: "#unlock-handle",
 			animate:true,
 			slide: function(e,ui)
 			{
+				$('#unlock-handle').css('margin-left','-30px');
 				$("#slide-to-unlock").css("opacity", 1-(parseInt($("#unlock-handle").css("left"))/120));
+				var left = parseFloat($('#unlock-handle').css('left').replace('px', ''));
+				if (left>232) {
+					$('a.ui-slider-handle').css('left', '232px');
+				}
 			},
 			stop: function(e,ui)
 			{
-				if($("#unlock-handle").position().left == 205)
+				if($("#unlock-handle").position().left > 225)
 				{
 					unlock();
 				}
 				else
 				{
+					$('#unlock-handle').css('margin-left','0px');
 					$("#unlock-handle").animate({left: 0}, 200 );
+					$("#unlock-handle").parent().find('a').animate({left: 0}, 200 );
 					$("#slide-to-unlock").animate({opacity: 1}, 200 );
 				}
 			}
-			}
-		);
-
-		var unlock = function()
-		{
-			//$("#iphone-inside").animate({backgroundPosition: '0 40'}, 400, '', function()
-			//{
-			alert('unlock()');
-				$("#unlock-bottom").animate({bottom: -100}, 300);
-				$("#unlock-top").animate({top: -100}, 300, '', function()
-				{});
-				$("#iphone-inside").fadeOut("normal", function(){window.location="index.html";});
-			//});
 		}
+	);
+
+	
+
 
 	});
 
@@ -91,7 +106,9 @@ var runInit = function() {
 function scrollToPage(anchor){
      	$('html,body').animate({
 			scrollTop: $(anchor).offset().top
-		}, 'slow');
+		}, 'slow','linear',function(){
+			window.location = baseUrl + anchor;
+		});
 }
 
 /*
