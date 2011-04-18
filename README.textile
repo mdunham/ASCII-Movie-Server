@@ -1,0 +1,12 @@
+h1. MatthewDunham.com
+
+This is the source of my web site http://matthewdunham.com/
+
+Feel free to check me out all you want.
+
+h2. LinkedIn
+
+Find me on linkedin: http://www.linkedin.com/in/matthewdunham
+
+I'm almost always on IRC freenode channel #cakephp my nick mdunham918
+
