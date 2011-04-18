@@ -114,38 +114,10 @@ hr { height: 2px; color: #333; margin: 10px 50px; background: #333; }
 #contactFormContainer form div.input input:placeholder, #contactFormContainer form div.input textarea:placeholder { color:    #999; font-style: italic; }
 #contactFormContainer form div.input textarea { height: 240px; }
 
-.blue_button {
-	font-family: "Helvetica Neue", helvetica;
-	font-weight: bold;
-	padding: 6px 18px;
-	font-size: 20px;
-	line-height: 20px;
-	color: #FFF;
-	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6), 0px 1px 0px rgba(255,255,255,0.6); /* FF3.5+ */
-	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6), 0px 1px 0px rgba(255,255,255,0.6); /* Saf3.0+, Chrome */
-	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6), 0px 1px 0px rgba(255,255,255,0.6); /* Opera 10.5, IE 9.0 */
-	border: solid 1px #0A4073;
-	background: #1B5387;
-	background-image: -moz-linear-gradient(top, #418ACD, #1B5387); /* FF3.6 */
-	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #418ACD),color-stop(1, #1B5387)); /* Saf4+, Chrome */
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#418ACD', endColorstr='#1B5387'); /* IE6,IE7 */
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#418ACD', endColorstr='#1B5387')"; /* IE8 */
-	text-shadow: 0px 2px 0px #00488c;
-	font-family: 'HelveticaNeueBoldCond';
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	cursor: pointer;
-}
+.blue_button { font-family: "Helvetica Neue", helvetica;font-weight: bold;padding: 6px 18px;font-size: 20px;line-height: 20px;color: #FFF;-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6), 0px 1px 0px rgba(255,255,255,0.6); /* FF3.5+ */-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6), 0px 1px 0px rgba(255,255,255,0.6); /* Saf3.0+, Chrome */box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6), 0px 1px 0px rgba(255,255,255,0.6); /* Opera 10.5, IE 9.0 */border: solid 1px #0A4073;background: #1B5387;background-image: -moz-linear-gradient(top, #418ACD, #1B5387); /* FF3.6 */background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #418ACD),color-stop(1, #1B5387)); /* Saf4+, Chrome */filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#418ACD', endColorstr='#1B5387'); /* IE6,IE7 */-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#418ACD', endColorstr='#1B5387')"; /* IE8 */text-shadow: 0px 2px 0px #00488c;font-family: 'HelveticaNeueBoldCond';-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;cursor: pointer;}
 
-.blue_button:active {
-	background: #164169;
-	-moz-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* FF3.5+ */
-	-webkit-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* Saf3.0+, Chrome */
-	box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* Opera 10.5, IE 9.0 */
-	text-shadow: 0px 2px 0px #00488c;
-	border-color: #0A3158;
-}
+.blue_button:active { background: #164169;-moz-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* FF3.5+ */-webkit-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* Saf3.0+, Chrome */box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* Opera 10.5, IE 9.0 */text-shadow: 0px 2px 0px #00488c;border-color: #0A3158;}
+
 #contactFormContainer form #unlock {	opacity:0.85; background: #000; filter:alpha(opacity=40);	position: absolute;	width: 100%;	height: 100%;top: 0px;	left: 0px;z-index: 10000;}
 
 #unlock-bottom { position: relative; width:281px;  height:54px; border: 2px solid #616161; background: #282828; /* old browsers */background: -moz-linear-gradient(top, #282828 0%, #2B2B2B 48%, #1C1C1C 51%, #111111 100%); /* firefox */background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282828), color-stop(48%,#2B2B2B), color-stop(51%,#1C1C1C), color-stop(100%,#111111)); /* webkit */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282828', endColorstr='#111111',GradientType=0 ); /* ie */background: -o-linear-gradient(top, #282828 0%,#2B2B2B 48%,#1C1C1C 51%,#111111 100%); /* opera */ -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;  margin-left: -140px; left: 50%; top: 72px; }
