@@ -30,15 +30,17 @@ body { font: 14px 'Myriad Pro', 'Trebuche MS', 'HelveticaNeueLT Std', 'Helvetica
 #bottom_jaw div.teeth { display: none; background: url('../images/bottom_teeth.png') repeat-x 50px 0px;  height: 52px; width: 100%; position: absolute; top: -51px; }
 #bottom_jaw div.motto { width: 100%; position: absolute; top: 0px; height: auto; text-align: center; left: 0px; }
 
-h1 { width: 610px; font-weight: bold; font-size: 80px; margin: 14px auto; text-transform: uppercase; }
+h1 { width: 610px; font-weight: bold; font-size: 80px; margin: 14px auto; text-transform: uppercase; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
 h1 span { font-weight: normal; font-size: 60px; display: block; float:left; padding-top: 11px; }
+
+h2, h3, h4 { text-align:center; font-size:22px; padding: 80px 20px 20px 20px; text-transform: uppercase; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
 
 #container { height: 100%; }
 
 hr { height: 3px; color: #333; margin: 10px 50px; background: #333; }
 
 #main { list-style: none; margin: 0px; padding: 0px; height: 100%; }
-#main li { min-height: 550px; min-width: 705px; height: 100%; padding: 50px; width: 100%; z-index: 60; display: table; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+#main li { background: #FFFFFF; border-top: 1px #333 solid; min-height: 450px; min-width: 605px; height: 100%; padding: 50px; width: 100%; z-index: 60; display: table; position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 #main li div.center_content { display: table-cell; vertical-align: middle; height: 100%;  }
 
 #home div.nav { text-align: center; }
@@ -49,6 +51,9 @@ hr { height: 3px; color: #333; margin: 10px 50px; background: #333; }
 #home div.icons a { display: inline-block; padding-right: 10px; }
 #home div.icons a:last-child { padding-right: 0px; }
 
+#contactFormContainer { position: relative; z-index: 100; padding: 20px; width: 80%; margin: 10px auto; }
+#contactFormContainer form { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; border: 5px solid #666; -webkit-box-shadow: inset 0px 1px 1px #fff7ff; -moz-box-shadow: inset 0px 1px 1px #fff7ff; box-shadow: inset 0px 1px 1px #fff7ff;  }
+#contactFormContainer form div.input { padding:4px; width: 70%; border: 1px solid #666; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
 
 
 /*
@@ -73,10 +78,14 @@ hr { height: 3px; color: #333; margin: 10px 50px; background: #333; }
 
 @media screen and (max-height: 550px) {
 	#top_jaw, #bottom_jaw { display: none; }
+	h2, h3, h4 { text-align:center; font-size:22px; padding-top: 40px; }
+
 }
 
 @media screen and (max-width: 705px) {
 	#top_jaw, #bottom_jaw { display: none; }
+	h2, h3, h4 { text-align:center; font-size:22px; padding-top: 40px; }
+
 }
 
 /*
