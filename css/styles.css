@@ -26,6 +26,8 @@ body { font: 14px 'Myriad Pro', 'Trebuche MS', 'HelveticaNeueLT Std', 'Helvetica
 
 #top_jaw span, #bottom_jaw span { font-size: 80px; color: #FFF; text-transform: uppercase; font-family: 'Myriad Pro Cond', 'Myriad Pro', 'Trebuche MS', 'HelveticaNeueLT Std', 'Helvetica Neue', Helvetica, Arial; }
 
+#hideTeeth { position: absolute; top: 10px; right: 10px; color: #fff; font-size: 11px; display: block; padding: 5px;}
+
 #bottom_jaw { z-index: 100; overflow:visible!important; position: fixed; background: #000;  vertical-align: middle; bottom: 0px; left: 0px; width: 100%; height: 50%; }
 #bottom_jaw div.teeth { display: none; background: url('../images/bottom_teeth.png') repeat-x 50px 0px;  height: 52px; width: 100%; position: absolute; top: -51px; }
 #bottom_jaw div.motto { width: 100%; position: absolute; top: 0px; height: auto; text-align: center; left: 0px; }
@@ -61,17 +63,48 @@ hr { height: 3px; color: #333; margin: 10px 50px; background: #333; }
 #contactFormContainer form div.input input:placeholder, #contactFormContainer form div.input textarea:placeholder { color:    #999; font-style: italic; }
 #contactFormContainer form div.input textarea { height: 240px; }
 
-#contactFormContainer form #unlock {	background: #333;	opacity:0.4;filter:alpha(opacity=40);	position: absolute;	width: 100%;	height: 100%;top: 0px;	left: 0px;z-index: 10000;}
+.blue_button {
+	font-family: "Helvetica Neue", helvetica;
+	font-weight: bold;
+	padding: 12px 22px;
+	font-size: 20px;
+	line-height: 20px;
+	color: #FFF;
+	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6), 0px 1px 0px rgba(255,255,255,0.6); /* FF3.5+ */
+	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6), 0px 1px 0px rgba(255,255,255,0.6); /* Saf3.0+, Chrome */
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,0.6), 0px 1px 0px rgba(255,255,255,0.6); /* Opera 10.5, IE 9.0 */
+	border: solid 1px #0A4073;
+	background: #1B5387;
+	background-image: -moz-linear-gradient(top, #418ACD, #1B5387); /* FF3.6 */
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #418ACD),color-stop(1, #1B5387)); /* Saf4+, Chrome */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#418ACD', endColorstr='#1B5387'); /* IE6,IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#418ACD', endColorstr='#1B5387')"; /* IE8 */
+	text-shadow: 0px -2px 0px #00488c;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	cursor: pointer;
+}
 
-#unlock-bottom { position: relative; height:94px; background-image:url(../images/lock-bottom.png); }
-#slide-to-unlock {  position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height:94px; background-image:url(../images/slide-to-unlock.gif); }
-#unlock-slider-wrapper { padding-left:22px; padding-top:23px; }
-#unlock-slider { width:277px; height:50px; }
-#unlock-handle{ position: absolute; z-index: 10; height: 50px; width: 72px; top: 0px; left: 0px; background-image: url(../images/lock-slider.png); }
+.blue_button:active {
+	background: #164169;
+	-moz-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* FF3.5+ */
+	-webkit-box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* Saf3.0+, Chrome */
+	box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); /* Opera 10.5, IE 9.0 */
+	text-shadow: 0px 2px 0px #00488c;
+	border-color: #0A3158;
+}
+#contactFormContainer form #unlock {	opacity:0.8; background: #888 url('../images/lock_mid_cont.png') repeat-x 0px 120px; filter:alpha(opacity=40);	position: absolute;	width: 100%;	height: 100%;top: 0px;	left: 0px;z-index: 10000;}
+
+#unlock-bottom { position: relative; width:281px;  height:54px; background-image:url(../images/lock-bottom_box.png); margin-left: -140px; left: 50%; top: 52px; }
+#slide-to-unlock {  position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height:54px; background-image:url(../images/slide-to-unlock.gif); background-position: -20px -20px; }
+#unlock-slider-wrapper { padding-left:2px; padding-top:3px; }
+#unlock-slider { width:235px; height:50px; }
+#unlock h4 { text-align:  center; padding: 10px; color: #fff;  margin-top: 40px; text-shadow: 0px 1px 1px #000;filter: dropshadow(color=#000000, offx=0, offy=1); }
 
 /* Used by the jQuery slider */
 .ui-slider { position: relative; background-repeat: no-repeat; background-position: center center; }
-
+.ui-slider-handle { position: absolute; z-index: 10; height: 50px; width: 72px; top: 0px; left: 0px; background-image: url(../images/lock-slider.png);  }
 /*
 	End Main Layout Styles
 **************************************/
