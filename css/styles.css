@@ -33,24 +33,12 @@
 }
 
 @font-face {
-    font-family: 'YanoneKaffeesatzRegular';
-    src: url('fonts/YanoneKaffeesatz-Regular-webfont.eot');
-    src: url('fonts/YanoneKaffeesatz-Regular-webfont.eot?#iefix') format('eot'),
-         url('fonts/YanoneKaffeesatz-Regular-webfont.woff') format('woff'),
-         url('fonts/YanoneKaffeesatz-Regular-webfont.ttf') format('truetype'),
-         url('fonts/YanoneKaffeesatz-Regular-webfont.svg#webfont1BSMunJa') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'YanoneKaffeesatzBold';
-    src: url('fonts/YanoneKaffeesatz-Bold-webfont.eot');
-    src: url('fonts/YanoneKaffeesatz-Bold-webfont.eot?#iefix') format('eot'),
-         url('fonts/YanoneKaffeesatz-Bold-webfont.woff') format('woff'),
-         url('fonts/YanoneKaffeesatz-Bold-webfont.ttf') format('truetype'),
-         url('fonts/YanoneKaffeesatz-Bold-webfont.svg#webfontSPMO2fGv') format('svg');
+    font-family: 'Broken15Regular';
+    src: url('fonts/broken15-webfont.eot');
+    src: url('fonts/broken15-webfont.eot?#iefix') format('eot'),
+         url('fonts/broken15-webfont.woff') format('woff'),
+         url('fonts/broken15-webfont.ttf') format('truetype'),
+         url('fonts/broken15-webfont.svg#webfontZLF46GM6') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -77,10 +65,10 @@ body { font: 14px 'HelveticaNeueLT Std', 'Helvetica Neue', Helvetica, Arial; col
 #bottom_jaw div.teeth { display: none; background: url('../images/bottom_teeth.png') repeat-x 50px 0px;  height: 52px; width: 100%; position: absolute; top: -51px; }
 #bottom_jaw div.motto { width: 100%; position: absolute; top: 0px; height: auto; text-align: center; left: 0px; }
 
-h1 { width: 400px; font-family: 'YanoneKaffeesatzBold'; font-weight: bold; font-size: 80px; margin: 14px auto; text-transform: uppercase; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
-h1 span { font-weight: normal; font-family: 'YanoneKaffeesatzRegular'; font-size: 60px; display: block; float:left; padding-top: 12px; }
+h1 { width: 400px; font-family: 'Broken15Regular'; font-weight: bold; font-size: 100px; margin: 14px auto; text-transform: uppercase; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
+h1 span { font-weight: normal; font-family: 'Broken15Regular'; font-size: 60px; display: block; float:left; padding-top: 12px; }
 
-h2, h3, h4 { font-family: 'BebasRegular'; text-align:center; font-size:32px; padding: 80px 20px 20px 20px; text-transform: uppercase; text-shadow: 0px 1px 1px #ffffff;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
+h2, h3, h4 { font-family: 'BebasRegular'; text-align:center; font-size:32px; padding: 80px 20px 20px 20px; text-transform: uppercase; text-shadow: 0px 1px 1px #CCC;filter: dropshadow(color=#ffffff, offx=0, offy=1); }
 
 div.center_content h2, div.center_content h3, div.center_content h4 { padding-top: 0px!important; }
 
@@ -97,7 +85,7 @@ hr { height: 2px; color: #333; margin: 10px 50px; background: #333; }
 #main li div.center_content { display: table-cell; vertical-align: middle; height: 100%;  }
 
 #home div.nav { text-align: center; }
-#home div.nav a { display: inline-block; padding: 6px 10px; color: #E54D26; font-size: 14px; border-right: 1px solid #000; }
+#home div.nav a { display: inline-block;  text-shadow: 0px 1px 1px #EEE; text-decoration: none; font-family: 'BebasRegular'; padding: 6px 10px; color: #E54D26; font-size: 14px; border-right: 1px solid #000; font-size: 18px; }
 #home div.nav a:last-child { border: none; }
 
 #home div.icons { text-align: center; padding-top: 30px; }

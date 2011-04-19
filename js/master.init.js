@@ -5,7 +5,36 @@
  */
 
 var checkTimer,
-	baseUrl;
+baseUrl,
+socket,
+updater = null,
+movieData = [],
+movieFrame = 0;
+
+var mapMake = function() {
+	if (movieData.length>0) {
+		var text = movieData.shift();
+		$('#movie pre').text(text);
+		document.title = movieData.length;
+	}
+}
+
+var playMovie = function() {
+	if (updater==null&&movieData.length>10) {
+		updater = setInterval(mapMake, 130);
+	}
+	$.ajax({
+		url: 'server/startDaemon.php',
+		dataType: 'json',
+		success: function(data){
+			for (i=0;i<data.length;i++) {
+				movieData.push(data[i]);
+			}
+			if (socket) setTimeout('playMovie()',100);
+		}
+	})
+}
+
 
 if (window.jQuery) {
 	jQuery(function($){
@@ -19,6 +48,16 @@ if (window.jQuery) {
 			$('body').addClass('noteeth')
 		}
 
+		$('#movie').click(function(){
+			
+			if (!socket) {
+				socket = true;
+					$(this).find('pre').text('Loading');
+			playMovie();
+			}
+
+
+		});
 
 		$('#hideTeeth').click(function(e) {
 			$.cookie('noteeth', 'true');
@@ -71,9 +110,15 @@ if (window.jQuery) {
 					unlock();
 				} else {
 					
-					$("#unlock-handle").animate({left: 0}, 200 );
-					$("#unlock-handle").parent().find('a').animate({left: 0}, 200 );
-					$("#slide-to-unlock").animate({opacity: 1}, 200 );
+					$("#unlock-handle").animate({
+						left: 0
+					}, 200 );
+					$("#unlock-handle").parent().find('a').animate({
+						left: 0
+					}, 200 );
+					$("#slide-to-unlock").animate({
+						opacity: 1
+					}, 200 );
 				}
 			}
 		});
@@ -85,7 +130,7 @@ if (window.jQuery) {
 // Was here for the browser size restriction.
 var runCheck = function() {
 	var width = $(window).width(),
-	      height = $(window).height();
+	height = $(window).height();
 
 	if (width > 705 && height > 550) {
 		clearInterval(checkTimer);
@@ -97,17 +142,21 @@ var runInit = function() {
 	$('.motto').fadeOut(1000, function(){
 		$('.motto').remove();
 		$('.teeth').show();
-		$('#top_jaw').animate({'height': '50px'}, 800,'swing');
-		$('#bottom_jaw').animate({'height': '50px'}, 800);
+		$('#top_jaw').animate({
+			'height': '50px'
+		}, 800,'swing');
+		$('#bottom_jaw').animate({
+			'height': '50px'
+		}, 800);
 	});
 }
 
 function scrollToPage(anchor){
-     	$('html,body').animate({
-			scrollTop: $(anchor).offset().top
-		}, 'slow','linear',function(){
-			window.location = baseUrl + anchor;
-		});
+	$('html,body').animate({
+		scrollTop: $(anchor).offset().top
+	}, 'slow','linear',function(){
+		window.location = baseUrl + anchor;
+	});
 }
 
 /*
