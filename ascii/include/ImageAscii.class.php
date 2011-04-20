@@ -33,7 +33,7 @@ class ImageAscii{
 		$this->blockw = 8;
 		$this->blockh = 13;
 		$this->data = "";
-		$this->txtCols = 160;
+		$this->txtCols = 80;
 		$this->txtRows = 10;
 		$this->x1 = 128; $this->y1 = 128;
 		$this->x2 = 0; $this->y2 = 0;

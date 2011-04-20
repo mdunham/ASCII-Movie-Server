@@ -15,20 +15,24 @@ var mapMake = function() {
 	if (movieData.length>0) {
 		var text = movieData.shift();
 		$('#movie pre').text(text);
-		document.title = movieData.length;
 	}
 }
 
 var playMovie = function() {
 	if (updater==null&&movieData.length>10) {
-		updater = setInterval(mapMake, 130);
+		updater = setInterval(mapMake, 100);
+	}
+	if (movieFrame==177) {
+		socket = false;
 	}
 	$.ajax({
-		url: 'server/startDaemon.php',
+		url: 'server/startDaemon.php?f='+movieFrame,
 		dataType: 'json',
 		success: function(data){
+			
 			for (i=0;i<data.length;i++) {
 				movieData.push(data[i]);
+				movieFrame++;
 			}
 			if (socket) setTimeout('playMovie()',100);
 		}
