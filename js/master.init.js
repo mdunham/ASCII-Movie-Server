@@ -20,7 +20,7 @@ var mapMake = function() {
 
 var playMovie = function() {
 	if (updater==null&&movieData.length>10) {
-		updater = setInterval(mapMake, 100);
+		updater = setInterval(mapMake, 140);
 	}
 	if (movieFrame==177) {
 		socket = false;
@@ -30,11 +30,12 @@ var playMovie = function() {
 		dataType: 'json',
 		success: function(data){
 			
-			for (i=0;i<data.length;i++) {
+			for (i=0; i < data.length; i++)  {
 				movieData.push(data[i]);
 				movieFrame++;
 			}
-			if (socket) setTimeout('playMovie()',100);
+
+			if (socket) setTimeout('playMovie()', 100);
 		}
 	})
 }
@@ -143,15 +144,15 @@ var runCheck = function() {
 }
 
 var runInit = function() {
-	$('.motto').fadeOut(1000, function(){
+	$('.motto').fadeOut(500, function(){
 		$('.motto').remove();
 		$('.teeth').show();
 		$('#top_jaw').animate({
-			'height': '50px'
-		}, 800,'swing');
+			'height': '10px'
+		}, 1000,'swing');
 		$('#bottom_jaw').animate({
-			'height': '50px'
-		}, 800);
+			'height': '10px'
+		}, 1000);
 	});
 }
 
