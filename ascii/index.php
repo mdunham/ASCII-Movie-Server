@@ -15,7 +15,7 @@ set_time_limit(700);
 			'name' => basename($filename)
 		);
 			$imgAscii = new ImageAscii();
-$imgAscii->setContrast(0, 15);
+$imgAscii->setContrast(-3, 17);
 $imgAscii->setBlock(3, 5);
 		echo 'Opened '. $filename ."\n";
 		if ( $imgAscii->load($file) ){
