@@ -2,7 +2,7 @@
 header('Content-Type: text/html');
 header('Cache-Control: no-cache');
 
-$frame = $_GET['f'];
+$frame = $_GET['start'];
 $frames = 5;
 $ascii = array();
 
